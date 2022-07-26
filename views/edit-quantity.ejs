@@ -1,0 +1,56 @@
+<div class="container mt-3">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Edit Product Data</h2>
+  
+        <% if (typeof errors != 'undefined') { %>
+      
+          <div class="alert alert-danger" role="alert">
+            <ul>
+              <% errors.forEach(error=> { %>
+                <li><%= error.message %></li>
+                  <% }) %> 
+                </ul>
+              </div>
+              <% } %>
+                      
+  
+         <% if (!model) { %>
+        <div class="alert alert-danger fw-bold" role="alert">
+          User not found.
+          <a href="/contact" class="alert-link fw-light"
+            ><br />Error.</a
+          >
+        </div>
+        <% } else {%>
+        <form
+          method="post"
+          action="/admin/item-list/edit-quantity/update"
+        >
+        <input type="" name="oldName" value="<%= model.item_name %>"/>
+        <input type="" name="oldCategory" value="<%= model.category%>"/>
+        <input type="" name="oldPrice" value="<%= model.price %>"/>
+        <input type="" name="oldQuantity" value="<%= model.quantity %>"/>
+          
+            
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity :</label>
+            <input
+              type="number"
+              class="form-control"
+              id="quantity"
+              name="quantity"
+              value="<%= model.quantity %>"
+            />
+            </div>
+          
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Update Product</button>        
+          </div>
+        </form>
+  
+        <% } %>
+      </div>
+    </div>
+  </div>
+  
