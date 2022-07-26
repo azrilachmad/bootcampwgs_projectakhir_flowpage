@@ -964,7 +964,7 @@ app.get("/admin/item-history", checkNotAuthenticated, isAdmin, (req, res) => {
 
 app.use("/", (req, res) => {
   res.status(404);
-  res.send("404 Not Found");
+  res.render("error-404", {layout: "layouts/login-layout", title: '404 not found'})
 });
 
 function checkAuthenticated(req, res, next) {

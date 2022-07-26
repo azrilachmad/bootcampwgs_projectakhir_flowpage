@@ -1,11 +1,11 @@
 Project Akhir Bootcamp Batch 2 WGS
 
 Aplikasi Inventory :
-- CRUD (Create Read Update Delete ✔) 
+- CRUD ✔ 
 - Login ✔
 - Super Admin ✔
-- App Log
+- App Log ✔
 - Picture For Stuff  ✔
 - List Page ✔
 - Detail Page ✔
-- Flow Page 
+- Flow Page ✔
